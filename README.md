@@ -13,7 +13,7 @@ build.gradle:
 
 ```groovy
 plugins {
-  id 'com.kageiit.url-cache' version '1.0.0'
+  id 'net.vrallev.url-cache' version '1.0.0'
 }
 ```
 
@@ -25,16 +25,16 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.kageiit:url-cache-plugin:1.0.0"
+        classpath "net.vrallev.gradle:url-cache-plugin:1.0.1"
     }
 }
-apply plugin: 'com.kageiit.url-cache'
+apply plugin: 'net.vrallev.url-cache'
 ```
 
 This plugin was created mainly to address the problem of not being able to cache shared build configuration files using `apply from:` . You can now simply do:
 
 ```groovy
-apply plugin: 'com.kageiit.url-cache'
+apply plugin: 'net.vrallev.url-cache'
 apply from: urlCache.get('http://example.com/shared-build-config.gradle')
 ```
 
